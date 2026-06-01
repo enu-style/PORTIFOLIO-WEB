@@ -33,9 +33,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: var(--text-dark);
+  color: white;
   line-height: 1.6;
-  background: var(--bg-white);
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
 }
 
 html {
@@ -56,6 +56,8 @@ button {
 section {
   padding: 100px 20px;
   position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .container {

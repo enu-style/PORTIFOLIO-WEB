@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(30, 41, 59, 0.95);
   backdrop-filter: blur(10px);
   z-index: 1000;
   transition: all 0.3s ease;
@@ -11,9 +11,9 @@
 }
 
 .navbar.scrolled {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid var(--border-color);
-  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(30, 41, 59, 1);
 }
 
 .navbar-container {
@@ -52,7 +52,7 @@
 }
 
 .nav-menu li a {
-  color: var(--text-dark);
+  color: white;
   font-weight: 500;
   transition: color 0.3s ease;
   position: relative;
@@ -71,7 +71,7 @@
 }
 
 .nav-menu li a:hover {
-  color: var(--primary-color);
+  color: #c7d2fe;
 }
 
 .nav-menu li a:hover::after {
@@ -81,7 +81,7 @@
 .nav-icon {
   display: none;
   font-size: 1.5rem;
-  color: var(--text-dark);
+  color: white;
   cursor: pointer;
 }
 
@@ -95,7 +95,7 @@
     left: -100%;
     top: 70px;
     flex-direction: column;
-    background-color: var(--bg-white);
+    background-color: rgba(30, 41, 59, 0.98);
     width: 100%;
     text-align: center;
     transition: left 0.3s ease;
