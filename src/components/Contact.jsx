@@ -1,40 +1,45 @@
-import React, { useState } from 'react';
-import { FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt } from 'react-icons/fa';
-import './Contact.css';
+import React, { useState } from "react";
+import {
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
+import "./Contact.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
-  const [status, setStatus] = useState('');
+  const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     // For now, just show a success message
     // You can integrate with Formspree or EmailJS later
-    setStatus('Thank you for your message! I will get back to you soon.');
-    
+    setStatus("Thank you for your message! I will get back to you soon.");
+
     // Reset form
     setFormData({
-      name: '',
-      email: '',
-      message: ''
+      name: "",
+      email: "",
+      message: "",
     });
 
     // Clear status after 5 seconds
     setTimeout(() => {
-      setStatus('');
+      setStatus("");
     }, 5000);
   };
 
@@ -45,7 +50,7 @@ const Contact = () => {
         <p className="contact-subtitle">
           I'm currently looking for internship opportunities. Let's connect!
         </p>
-        
+
         <div className="contact-content">
           <div className="contact-info">
             <h3>Contact Information</h3>
@@ -53,7 +58,9 @@ const Contact = () => {
               <FaEnvelope />
               <div>
                 <h4>Email</h4>
-                <a href="mailto:getnetenyew65@gmail.com">getnetenyew65@gmail.com</a>
+                <a href="mailto:getnetenyew65@gmail.com">
+                  getnetenyew65@gmail.com
+                </a>
               </div>
             </div>
             <div className="info-item">
@@ -66,17 +73,17 @@ const Contact = () => {
             <div className="social-links">
               <h4>Connect with me</h4>
               <div className="social-icons">
-                <a 
-                  href="https://github.com/enu-style" 
-                  target="_blank" 
+                <a
+                  href="https://github.com/enu-style"
+                  target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
                 >
                   <FaGithub />
                 </a>
-                <a 
-                  href="https://linkedin.com/in/enyewgetnet" 
-                  target="_blank" 
+                <a
+                  href="https://www.linkedin.com/in/enyew-getnet-109217349/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
                 >
