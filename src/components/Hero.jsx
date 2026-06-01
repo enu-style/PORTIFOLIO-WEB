@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin, FaDownload } from "react-icons/fa";
 import "./Hero.css";
 
 const Hero = () => {
+  const baseUrl = import.meta.env.BASE_URL;
   return (
     <section id="home" className="hero">
       <div className="container hero-container">
@@ -50,14 +51,14 @@ const Hero = () => {
           <div className="hero-image">
             <div className="image-container">
               <img
-                src="/images/enu.jpg"
+                src={`${baseUrl}images/enu.jpg`}
                 alt="Enyew Getnet"
                 className="profile-image"
               />
             </div>
           </div>
         </div>
-        <a href="/resume.pdf" download className="resume-download">
+        <a href={`${baseUrl}resume.pdf`} download className="resume-download">
           <FaDownload /> Download Resume
         </a>
       </div>
