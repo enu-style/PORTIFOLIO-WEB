@@ -1,134 +1,217 @@
 .github-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  position: relative;
-  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(20, 184, 166, 0.055), transparent 65%),
+    transparent;
 }
 
-.github-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 30% 20%, rgba(236, 72, 153, 0.2) 0%, transparent 50%),
-    radial-gradient(circle at 70% 80%, rgba(251, 191, 36, 0.2) 0%, transparent 50%);
-  pointer-events: none;
+.github-section .section-heading {
+  max-width: 680px;
+  margin: 0 auto 44px;
+  text-align: center;
 }
 
-.github-section .section-title {
-  color: white;
+.github-section .section-eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--teal);
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.15em;
 }
 
-.github-section .section-title::after {
-  background-color: white;
+.github-section .section-heading h2 {
+  margin-bottom: 16px;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.github-section .section-heading > p {
+  max-width: 590px;
+  margin-inline: auto;
+  font-size: 1rem;
+  line-height: 1.8;
 }
 
 .github-content {
+  position: relative;
   display: flex;
   justify-content: center;
-  position: relative;
-  z-index: 1;
 }
 
 .github-card {
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  padding: 3rem;
-  max-width: 600px;
-  text-align: center;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  width: 100%;
+  max-width: 920px;
+  overflow: hidden;
+  background: rgba(17, 28, 46, 0.88);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.github-card-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: clamp(26px, 5vw, 46px);
 }
 
 .github-icon {
-  font-size: 5rem;
-  margin-bottom: 1.5rem;
-  animation: pulse 2s ease-in-out infinite;
-}
-
-.github-card h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.github-card p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-}
-
-.github-stats {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  flex-shrink: 0;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  color: var(--teal);
+  background: rgba(45, 212, 191, 0.08);
+  border: 1px solid rgba(45, 212, 191, 0.2);
+  border-radius: 16px;
+  font-size: 2.25rem;
 }
 
-.stat-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+.github-copy {
+  min-width: 0;
 }
 
-.stat-item svg {
-  font-size: 1.5rem;
+.github-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--teal);
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
 }
 
-.stat-item span {
-  font-size: 0.9rem;
-  opacity: 0.9;
+.github-copy h3 {
+  margin-bottom: 14px;
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  line-height: 1.3;
+}
+
+.github-copy p,
+.github-card-side p {
+  color: var(--text-muted);
+  font-size: 0.94rem;
+  line-height: 1.8;
+}
+
+.github-copy p {
+  margin-bottom: 25px;
 }
 
 .github-button {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 1rem 2.5rem;
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-  color: #1f2937;
-  border-radius: 8px;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 18px;
+  color: #06201d;
+  background: var(--teal);
+  border: 1px solid transparent;
+  border-radius: 9px;
+  font-size: 0.9rem;
   font-weight: 700;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 25px rgba(251, 191, 36, 0.4);
+  transition: background-color 180ms ease, transform 180ms ease,
+    box-shadow 180ms ease;
 }
 
 .github-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(251, 191, 36, 0.6);
+  transform: translateY(-2px);
+  background: #5eead4;
+  box-shadow: 0 10px 25px rgba(45, 212, 191, 0.16);
 }
 
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
+.github-button-arrow {
+  margin-left: 4px;
+  font-size: 0.8rem;
 }
 
-@media (max-width: 768px) {
+.github-card-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 34px;
+  background: rgba(148, 163, 184, 0.035);
+  border-left: 1px solid var(--border-color);
+}
+
+.github-side-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 19px;
+  color: var(--teal);
+  background: rgba(45, 212, 191, 0.08);
+  border-radius: 11px;
+  font-size: 1.1rem;
+}
+
+.github-card-side h4 {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+.github-card-side p {
+  margin-bottom: 22px;
+  font-size: 0.88rem;
+}
+
+.github-repositories-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--teal);
+  font-size: 0.84rem;
+  font-weight: 650;
+  transition: color 180ms ease;
+}
+
+.github-repositories-link:hover {
+  color: #99f6e4;
+}
+
+.github-repositories-link svg {
+  font-size: 0.72rem;
+}
+
+@media (max-width: 760px) {
   .github-card {
-    padding: 2rem;
-  }
-
-  .github-icon {
-    font-size: 4rem;
-  }
-
-  .github-card h3 {
-    font-size: 1.5rem;
-  }
-
-  .github-stats {
     grid-template-columns: 1fr;
+  }
+
+  .github-card-main {
+    gap: 18px;
+    padding: 28px;
+  }
+
+  .github-card-side {
+    padding: 28px;
+    border-top: 1px solid var(--border-color);
+    border-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .github-card-main {
+    flex-direction: column;
+    padding: 23px;
+  }
+
+  .github-card-side {
+    padding: 23px;
+  }
+
+  .github-button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .github-button,
+  .github-repositories-link {
+    transition: none;
   }
 }

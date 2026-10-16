@@ -1,63 +1,76 @@
-import React from 'react';
-import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaJava } from 'react-icons/fa';
-import './Skills.css';
+import React from "react";
+import { FaCode, FaDesktop, FaServer, FaTools } from "react-icons/fa";
+import "./Skills.css";
+
+const skillGroups = [
+  {
+    title: "Frontend development",
+    description: "Building user interfaces for the web.",
+    icon: <FaDesktop aria-hidden="true" />,
+    skills: ["HTML5", "CSS3", "JavaScript", "React", "Responsive Design"],
+  },
+  {
+    title: "Programming",
+    description: "Developing logical solutions to problems.",
+    icon: <FaCode aria-hidden="true" />,
+    skills: ["JavaScript", "Java", "Problem Solving"],
+  },
+  {
+    title: "Backend & databases",
+    description: "Learning how applications manage data and services.",
+    icon: <FaServer aria-hidden="true" />,
+    skills: ["Node.js", "Express", "PostgreSQL", "REST APIs"],
+  },
+  {
+    title: "Tools & workflow",
+    description: "Tools used to develop and maintain projects.",
+    icon: <FaTools aria-hidden="true" />,
+    skills: ["Git", "GitHub", "VS Code", "npm", "Vite"],
+  },
+];
 
 const Skills = () => {
-  const skills = [
-    {
-      name: 'HTML',
-      icon: <FaHtml5 />,
-      color: '#E34F26',
-      description: 'Semantic markup & accessibility'
-    },
-    {
-      name: 'CSS',
-      icon: <FaCss3Alt />,
-      color: '#1572B6',
-      description: 'Responsive design & animations'
-    },
-    {
-      name: 'React',
-      icon: <FaReact />,
-      color: '#61DAFB',
-      description: 'Component-based UI development',
-      badge: 'Learning Deeply'
-    },
-    {
-      name: 'Node.js',
-      icon: <FaNodeJs />,
-      color: '#339933',
-      description: 'Backend & API development'
-    },
-    {
-      name: 'Java',
-      icon: <FaJava />,
-      color: '#007396',
-      description: 'OOP & software design'
-    }
-  ];
-
   return (
-    <section id="skills" className="skills">
+    <section id="skills" className="skills-section">
       <div className="container">
-        <h2 className="section-title">Skills & Technologies</h2>
-        <p className="skills-subtitle">
-          Technologies I work with and continue to learn
-        </p>
+        <div className="section-heading">
+          <span className="section-eyebrow">MY TOOLKIT</span>
+          <h2>
+            Skills & <span className="highlight">technologies</span>
+          </h2>
+          <p>
+            The languages, technologies, and tools I use or am learning to build
+            software projects.
+          </p>
+        </div>
+
         <div className="skills-grid">
-          {skills.map((skill, index) => (
-            <div key={index} className="skill-card">
-              {skill.badge && (
-                <span className="skill-badge">{skill.badge}</span>
-              )}
-              <div className="skill-icon" style={{ color: skill.color }}>
-                {skill.icon}
+          {skillGroups.map((group, index) => (
+            <article className="skill-card" key={group.title}>
+              <div className="skill-card-top">
+                <div className="skill-icon">{group.icon}</div>
+                <span className="skill-index">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
               </div>
-              <h3 className="skill-name">{skill.name}</h3>
-              <p className="skill-description">{skill.description}</p>
-            </div>
+
+              <h3>{group.title}</h3>
+              <p className="skill-description">{group.description}</p>
+
+              <div className="skill-tags">
+                {group.skills.map((skill) => (
+                  <span className="skill-tag" key={skill}>
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </article>
           ))}
         </div>
+
+        <p className="skills-note">
+          My toolkit continues to grow as I learn and build new projects.
+        </p>
       </div>
     </section>
   );

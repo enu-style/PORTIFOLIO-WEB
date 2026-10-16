@@ -1,56 +1,104 @@
-import React from 'react';
-import { FaUniversity, FaCode, FaLightbulb } from 'react-icons/fa';
-import './About.css';
+import React from "react";
+import {
+  FaGraduationCap,
+  FaLaptopCode,
+  FaLightbulb,
+  FaBullseye,
+} from "react-icons/fa";
+import "./About.css";
+
+const highlights = [
+  {
+    icon: <FaGraduationCap aria-hidden="true" />,
+    title: "My education",
+    description:
+      "Studying Software Engineering at Injibara University and strengthening my computer science foundations.",
+  },
+  {
+    icon: <FaLaptopCode aria-hidden="true" />,
+    title: "What I build",
+    description:
+      "Developing web applications and exploring frontend and backend technologies through practical projects.",
+  },
+  {
+    icon: <FaLightbulb aria-hidden="true" />,
+    title: "How I learn",
+    description:
+      "Learning by building, debugging, asking questions, and improving my code one step at a time.",
+  },
+  {
+    icon: <FaBullseye aria-hidden="true" />,
+    title: "My goal",
+    description:
+      "Grow into a capable software engineer and contribute to useful, real-world software projects.",
+  },
+];
 
 const About = () => {
   return (
-    <section id="about" className="about">
+    <section id="about" className="about-section">
       <div className="container">
-        <h2 className="section-title">About Me</h2>
-        <div className="about-content">
-          <div className="about-text">
-            <p className="about-intro">
-              Hello! I'm Enyew Getnet, a 3rd-year Software Engineering student at 
-              <strong> Injibara University</strong> in Ethiopia. I'm passionate about 
-              technology and love the challenge of turning ideas into working software.
-            </p>
+        <div className="section-heading">
+          <span className="section-eyebrow">GET TO KNOW ME</span>
+          <h2>
+            A little about <span className="highlight">me</span>
+          </h2>
+          <p>
+            My journey into software development, what motivates me, and where I
+            want to go.
+          </p>
+        </div>
+
+        <div className="about-layout">
+          <div className="about-story">
+            <div className="about-label">
+              <span className="about-label-line" />
+              MY STORY
+            </div>
+
+            <h3>
+              Turning curiosity into
+              <span className="highlight"> working software.</span>
+            </h3>
+
             <p>
-              Currently, I'm diving deep into <strong>React</strong> to strengthen my 
-              front-end development skills. I believe in learning by doing, and I'm 
-              constantly working on projects that push me to grow as a developer.
+              I'm Enyew Getnet, a Software Engineering student at Injibara
+              University with an interest in building practical software and
+              solving problems through technology.
             </p>
+
             <p>
-              I'm actively seeking an <strong>internship opportunity</strong> where I can 
-              contribute to real-world projects, learn from experienced developers, and 
-              grow both technically and professionally. I'm eager to bring my enthusiasm, 
-              problem-solving skills, and willingness to learn to a dynamic team.
+              I enjoy exploring how websites and applications work, developing
+              my programming skills, and turning ideas into projects that people
+              can use. Every project gives me an opportunity to learn something
+              new and become a better developer.
             </p>
+
+            <p>
+              I'm working toward becoming a professional software engineer,
+              gaining practical experience, and collaborating with others to
+              build useful digital solutions.
+            </p>
+
+            <a href="#contact" className="about-contact-link">
+              Let's connect <span aria-hidden="true">↗</span>
+            </a>
           </div>
-          <div className="about-cards">
-            <div className="about-card">
-              <div className="card-icon">
-                <FaUniversity />
-              </div>
-              <h3>Education</h3>
-              <p>3rd Year Software Engineering</p>
-              <p className="card-detail">Injibara University</p>
-            </div>
-            <div className="about-card">
-              <div className="card-icon">
-                <FaCode />
-              </div>
-              <h3>Focus</h3>
-              <p>Full-Stack Development</p>
-              <p className="card-detail">Learning React deeply</p>
-            </div>
-            <div className="about-card">
-              <div className="card-icon">
-                <FaLightbulb />
-              </div>
-              <h3>Goal</h3>
-              <p>Software Internship</p>
-              <p className="card-detail">Ready to contribute & learn</p>
-            </div>
+
+          <div className="about-highlights">
+            {highlights.map((item, index) => (
+              <article className="about-card" key={item.title}>
+                <div className="about-card-icon">{item.icon}</div>
+
+                <div className="about-card-content">
+                  <span className="about-card-number">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </div>

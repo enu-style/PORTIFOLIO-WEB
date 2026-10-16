@@ -1,47 +1,98 @@
-import React, { useState, useEffect } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import './Navbar.css';
+import React, { useEffect, useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import "./Navbar.css";
+
+const links = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === "Escape") setIsOpen(false);
+    };
 
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
+  const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <div className="container navbar-container">
-        <a href="#home" className="logo" onClick={closeMenu}>
+    <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
+      <nav className="container navbar-container" aria-label="Main navigation">
+        <a
+          href="#home"
+          className="logo"
+          onClick={closeMenu}
+          aria-label="Enyew Getnet, home"
+        >
           Enyew<span>.dev</span>
         </a>
 
-        <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
-          <li><a href="#home" onClick={closeMenu}>Home</a></li>
-          <li><a href="#about" onClick={closeMenu}>About</a></li>
-          <li><a href="#skills" onClick={closeMenu}>Skills</a></li>
-          <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
-          <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
-        </ul>
-
-        <div className="nav-icon" onClick={toggleMenu}>
+        <button
+          type="button"
+          className="nav-toggle"
+          onClick={() => setIsOpen((open) => !open)}
+          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isOpen}
+          aria-controls="primary-navigation"
+        >
           {isOpen ? <FaTimes /> : <FaBars />}
-        </div>
-      </div>
-    </nav>
+        </button>
+
+        {isOpen && (
+          <button
+            type="button"
+            className="nav-backdrop"
+            aria-label="Close navigation menu"
+            onClick={closeMenu}
+          />
+        )}
+
+        <ul
+          id="primary-navigation"
+          className={`nav-menu ${isOpen ? "active" : ""}`}
+        >
+          {links.map((link) => (
+            <li key={link.href}>
+              <a href={link.href} onClick={closeMenu}>
+                {link.label}
+              </a>
+            </li>
+          ))}
+          <li className="nav-cta">
+            <a href="#contact" onClick={closeMenu}>
+              Let's talk <span aria-hidden="true">↗</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 
