@@ -7,8 +7,7 @@ import Projects from './components/Projects';
 import GitHub from './components/GitHub';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import './App.css';
-
+import Certifications from "./components/Certifications";
 function App() {
   return (
     <div className="App">
@@ -16,6 +15,7 @@ function App() {
       <Hero />
       <About />
       <Skills />
+      <Certifications />
       <Projects />
       <GitHub />
       <Contact />
