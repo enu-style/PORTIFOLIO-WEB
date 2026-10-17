@@ -81,6 +81,15 @@ const Contact = () => {
               <FaArrowRight className="info-arrow" aria-hidden="true" />
             </a>
 
+            <a className="info-item" href="tel:+251915275883" aria-label="Call +251915275883">
+              <span className="info-icon">📞</span>
+              <span className="info-copy">
+                <span className="info-label">PHONE</span>
+                <span className="info-value">+251915275883</span>
+              </span>
+              <span aria-hidden="true">→</span>
+            </a>
+
             <div className="info-item info-location">
               <span className="info-icon">
                 <FaMapMarkerAlt aria-hidden="true" />
