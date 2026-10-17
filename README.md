@@ -1,136 +1,117 @@
-# Enyew Getnet - Portfolio Website
+# Enyew Getnet — Personal Portfolio
 
-A modern, responsive portfolio website built with React for Enyew Getnet, a 3rd-year Software Engineering student at Injibara University.
+Welcome to my personal portfolio! I am a **fourth-year Software Engineering student at Injibara University**, passionate about software development and building practical applications.
 
-## Features
+## About Me
 
-- **Responsive Design**: Works seamlessly on mobile, tablet, and desktop
-- **Modern UI**: Clean and professional design with smooth animations
-- **Interactive Components**: Hover effects, smooth scrolling, and dynamic navigation
-- **Contact Form**: Frontend contact form (ready for backend integration)
-- **Project Showcase**: Display of academic and personal projects
-- **Skills Section**: Visual representation of technical skills
-- **GitHub Integration**: Link to GitHub profile with call-to-action
+- **Name:** Enyew Getnet
+- **Education:** Fourth-year Software Engineering student at Injibara University
+- **Email:** getnetenyew65@gmail.com
+- **Phone:** +251915275883
+- **GitHub:** [enu-style](https://github.com/enu-style)
+- **LinkedIn:** [Enyew Getnet](https://www.linkedin.com/in/enyew-getnet-109217349/)
 
-## Sections
+## Technologies
 
-1. **Hero Section**: Introduction with call-to-action buttons
-2. **About Section**: Background and goals
-3. **Skills Section**: Technical skills with icons
-4. **Projects Section**: Portfolio of projects with tech stacks
-5. **GitHub Section**: Link to GitHub profile
-6. **Contact Section**: Contact form and social links
-7. **Footer**: Copyright and credits
+- **Frontend:** HTML5, CSS3, JavaScript, React
+- **Backend:** Node.js, Express.js, REST APIs
+- **Database:** PostgreSQL, Prisma ORM
+- **Programming:** Java, JavaScript
+- **Tools:** Git, GitHub, VS Code, npm, Vite
 
-## Tech Stack
+## Portfolio Features
 
-- React 18
-- Vite (Build tool)
-- React Icons
-- CSS3 with custom properties
-- Responsive design with CSS Grid and Flexbox
+- Responsive personal portfolio
+- Introduction and profile photo
+- About me and technical skills
+- Projects and GitHub links
+- Certifications and learning resources
+- Contact information and social links
+- CV download
 
-## Getting Started
+## Featured Projects
 
-### Prerequisites
+### 1. Injibara University Campus Problem Reporting System
 
-- Node.js (v14 or higher)
-- npm or yarn
+A web application in development for reporting campus problems such as water supply, electrical lighting, and toilet facilities. It includes authentication, complaint tracking, comments, and role-based access control.
 
-### Installation
+**Technologies:** React, Node.js, Express, PostgreSQL, Prisma
 
-1. Clone the repository or extract the files
+[View project on GitHub](https://github.com/enu-style/Campus-Problem-Reporting-System)
 
-2. Install dependencies:
+### 2. Grace Hotel Management System
+
+A hotel management application designed to organize hotel operations and store application data.
+
+**Technologies:** Java, PostgreSQL, JDBC
+
+[View project on GitHub](https://github.com/enu-style/grace-hotel-management)
+
+### 3. Apple Website Clone
+
+A frontend practice project recreating a polished website layout and responsive user interface.
+
+**Technologies:** HTML, CSS, JavaScript
+
+[View project on GitHub](https://github.com/enu-style/apple-website-clone)
+
+### 4. Student Management System
+
+A desktop application for managing student information using a graphical interface and relational database.
+
+**Technologies:** Java, PostgreSQL, Swing
+
+[View project on GitHub](https://github.com/enu-style/student-management-system)
+
+## Certifications and Learning
+
+- Programming Fundamentals — February 2026
+- Artificial Intelligence Fundamentals — February 2026
+- Data Analysis Fundamentals — February 2026
+- Android Developer Fundamentals — February 2026
+- E-Learning
+
+Certificate documents are available in the portfolio website.
+
+## Run Locally
+
+Make sure Node.js and npm are installed.
+
+Clone the repository:
+
+```bash
+git clone https://github.com/enu-style/PORTIFOLIO-WEB.git
+cd PORTIFOLIO-WEB
+```
+
+Install dependencies:
+
 ```bash
 npm install
 ```
 
-3. Start the development server:
+Start the development server:
+
 ```bash
 npm run dev
 ```
 
-4. Open your browser and visit `http://localhost:5173`
-
-### Build for Production
+Build for production:
 
 ```bash
 npm run build
 ```
 
-The production-ready files will be in the `dist` folder.
-
-## Customization
-
-### Update Personal Information
-
-1. **Contact Email**: Update in `src/components/Contact.jsx`
-2. **GitHub URL**: Update in `src/components/Hero.jsx` and `src/components/GitHub.jsx`
-3. **LinkedIn URL**: Update in `src/components/Hero.jsx` and `src/components/Contact.jsx`
-
-### Add Your Resume
-
-Replace `public/resume.pdf` with your actual resume PDF file.
-
-### Update Projects
-
-Edit the `projects` array in `src/components/Projects.jsx` to add or modify projects.
-
-### Integrate Contact Form
-
-To make the contact form functional, you can integrate with:
-
-- **Formspree**: Add your Formspree endpoint to the form action
-- **EmailJS**: Follow EmailJS documentation to set up email sending
-- **Custom Backend**: Create your own API endpoint
-
-Example with Formspree:
-```jsx
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-```
-
-## Deployment
-
-### Deploy to Netlify
-
-1. Push your code to GitHub
-2. Connect your repository to Netlify
-3. Build command: `npm run build`
-4. Publish directory: `dist`
-
-### Deploy to Vercel
-
-1. Push your code to GitHub
-2. Import project in Vercel
-3. Vercel will auto-detect Vite configuration
-
-### Deploy to GitHub Pages
-
-1. Install gh-pages: `npm install --save-dev gh-pages`
-2. Add to package.json:
-```json
-"homepage": "https://enyewgetnet.github.io/portfolio",
-"scripts": {
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
-}
-```
-3. Run: `npm run deploy`
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## License
-
-This project is open source and available for personal use.
+The production files are generated in the `dist` directory.
 
 ## Contact
 
-Enyew Getnet - enyew@example.com
+I welcome opportunities to learn, collaborate, and contribute to software development projects.
 
-GitHub: [@enyewgetnet](https://github.com/enyewgetnet)
+- Email: getnetenyew65@gmail.com
+- GitHub: https://github.com/enu-style
+- LinkedIn: https://www.linkedin.com/in/enyew-getnet-109217349/
+
+---
+
+*Created by Enyew Getnet | Fourth-Year Software Engineering Student, Injibara University*
