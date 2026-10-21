@@ -4,7 +4,6 @@ import {
   FaLinkedin,
   FaDownload,
   FaArrowRight,
-  FaCode,
 } from "react-icons/fa";
 import "./Hero.css";
 
@@ -13,16 +12,10 @@ const Hero = () => {
 
   return (
     <section id="home" className="hero">
-      <div className="hero-glow hero-glow-one" aria-hidden="true" />
-      <div className="hero-glow hero-glow-two" aria-hidden="true" />
-
       <div className="container hero-container">
         <div className="hero-content">
           <div className="hero-text">
-            <div className="hero-eyebrow">
-              <span className="status-dot" />
-              Software Engineering Student
-            </div>
+            <div className="hero-eyebrow">Software Engineering Student</div>
 
             <h1 className="hero-title">
               Hi, I'm
@@ -47,7 +40,7 @@ const Hero = () => {
               </a>
 
               <a href="#contact" className="btn btn-secondary">
-                Get in touch
+                Contact
               </a>
             </div>
 
@@ -78,13 +71,6 @@ const Hero = () => {
 
           <div className="hero-visual">
             <div className="hero-image-frame">
-              <div className="hero-image-topline">
-                <span />
-                <span />
-                <span />
-                <p>developer.profile</p>
-              </div>
-
               <div className="image-container">
                 <img
                   src={`${baseUrl}images/enu.jpg`}
@@ -95,26 +81,13 @@ const Hero = () => {
               </div>
 
               <div className="hero-image-caption">
-                <div className="hero-code-icon">
-                  <FaCode aria-hidden="true" />
-                </div>
                 <div>
                   <strong>Enyew Getnet</strong>
-                  <span>Learning · Building · Growing</span>
+                  <span>Software Engineering Student</span>
                 </div>
-                <span className="hero-caption-dot" />
               </div>
             </div>
 
-            <div className="hero-floating-card" aria-hidden="true">
-              <span className="floating-card-icon">
-                <FaCode />
-              </span>
-              <span>
-                <strong>Code with purpose</strong>
-                <small>Build. Test. Improve.</small>
-              </span>
-            </div>
           </div>
         </div>
 

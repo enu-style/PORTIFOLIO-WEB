@@ -86,11 +86,6 @@ const Navbar = () => {
               </a>
             </li>
           ))}
-          <li className="nav-cta">
-            <a href="#contact" onClick={closeMenu}>
-              Let's talk <span aria-hidden="true">↗</span>
-            </a>
-          </li>
         </ul>
       </nav>
     </header>

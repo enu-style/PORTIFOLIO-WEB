@@ -6,8 +6,8 @@
 .App {
   min-height: 100vh;
   overflow: clip;
-  color: var(--text-primary);
-  background: transparent;
+  color: var(--text-dark);
+  background: var(--bg-light);
 }
 
 .container {
@@ -15,7 +15,7 @@
 }
 
 .highlight {
-  color: var(--teal);
+  color: var(--primary-color);
 }
 
 .btn {
@@ -42,25 +42,25 @@
 }
 
 .btn-primary {
-  color: #06201d;
-  background: var(--teal);
-  box-shadow: 0 8px 24px rgba(45, 212, 191, 0.13);
+  color: #ffffff;
+  background: var(--primary-color);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.18);
 }
 
 .btn-primary:hover {
-  background: #5eead4;
-  box-shadow: 0 12px 30px rgba(45, 212, 191, 0.2);
+  background: var(--primary-hover);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.22);
 }
 
 .btn-secondary {
-  color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.025);
-  border-color: var(--border-color);
+  color: var(--text-dark);
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
 }
 
 .btn-secondary:hover {
-  border-color: var(--teal);
-  background: rgba(45, 212, 191, 0.07);
+  border-color: var(--primary-color);
+  background: var(--primary-light);
 }
 
 @media (max-width: 480px) {

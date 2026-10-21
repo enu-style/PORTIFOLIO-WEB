@@ -1,6 +1,6 @@
 .site-footer {
   padding: 54px 24px 22px;
-  background: #080f1c;
+  background: var(--bg-white);
   border-top: 1px solid var(--border-color);
 }
 
@@ -18,19 +18,19 @@
 .footer-logo {
   display: inline-block;
   margin-bottom: 15px;
-  color: var(--text-primary);
+  color: var(--text-dark);
   font-size: 1.6rem;
   font-weight: 800;
   letter-spacing: -0.06em;
 }
 
 .footer-logo span {
-  color: var(--teal);
+  color: var(--primary-color);
 }
 
 .footer-brand > p,
 .footer-connect > p {
-  color: var(--text-muted);
+  color: var(--text-body);
   font-size: 0.9rem;
   line-height: 1.8;
 }
@@ -38,7 +38,7 @@
 .footer-navigation h3,
 .footer-connect h3 {
   margin-bottom: 17px;
-  color: var(--text-primary);
+  color: var(--text-dark);
   font-size: 0.95rem;
   font-weight: 700;
 }
@@ -57,7 +57,7 @@
 }
 
 .footer-navigation nav a:hover {
-  color: var(--teal);
+  color: var(--primary-color);
 }
 
 .footer-socials {
@@ -72,7 +72,7 @@
   place-items: center;
   width: 42px;
   height: 42px;
-  color: var(--text-primary);
+  color: var(--text-dark);
   background: rgba(148, 163, 184, 0.06);
   border: 1px solid var(--border-color);
   border-radius: 10px;
@@ -83,9 +83,9 @@
 
 .footer-socials a:hover {
   transform: translateY(-2px);
-  color: var(--teal);
-  background: rgba(45, 212, 191, 0.07);
-  border-color: rgba(45, 212, 191, 0.35);
+  color: var(--primary-color);
+  background: rgba(37, 99, 235, 0.07);
+  border-color: rgba(37, 99, 235, 0.35);
 }
 
 .footer-bottom {
@@ -113,7 +113,7 @@
 
 .heart-icon {
   display: inline-block;
-  color: var(--teal);
+  color: var(--primary-color);
   font-size: 0.8rem;
 }
 

@@ -81,7 +81,7 @@ const About = () => {
             </p>
 
             <a href="#contact" className="about-contact-link">
-              Let's connect <span aria-hidden="true">↗</span>
+              Contact <span aria-hidden="true">↗</span>
             </a>
           </div>
 

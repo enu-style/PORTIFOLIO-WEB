@@ -1,7 +1,5 @@
 .github-section {
-  background:
-    radial-gradient(ellipse at 50% 45%, rgba(20, 184, 166, 0.055), transparent 65%),
-    transparent;
+  background: var(--bg-light);
 }
 
 .github-section .section-heading {
@@ -13,7 +11,7 @@
 .github-section .section-eyebrow {
   display: inline-block;
   margin-bottom: 14px;
-  color: var(--teal);
+  color: var(--primary-color);
   font-size: 0.76rem;
   font-weight: 750;
   letter-spacing: 0.15em;
@@ -43,7 +41,7 @@
   width: 100%;
   max-width: 920px;
   overflow: hidden;
-  background: rgba(17, 28, 46, 0.88);
+  background: var(--surface);
   border: 1px solid var(--border-color);
   border-radius: 18px;
   box-shadow: var(--shadow);
@@ -62,9 +60,9 @@
   place-items: center;
   width: 64px;
   height: 64px;
-  color: var(--teal);
-  background: rgba(45, 212, 191, 0.08);
-  border: 1px solid rgba(45, 212, 191, 0.2);
+  color: var(--primary-color);
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.2);
   border-radius: 16px;
   font-size: 2.25rem;
 }
@@ -76,7 +74,7 @@
 .github-label {
   display: inline-block;
   margin-bottom: 12px;
-  color: var(--teal);
+  color: var(--primary-color);
   font-size: 0.72rem;
   font-weight: 750;
   letter-spacing: 0.12em;
@@ -106,8 +104,8 @@
   gap: 10px;
   min-height: 48px;
   padding: 12px 18px;
-  color: #06201d;
-  background: var(--teal);
+  color: #ffffff;
+  background: var(--primary-color);
   border: 1px solid transparent;
   border-radius: 9px;
   font-size: 0.9rem;
@@ -118,8 +116,8 @@
 
 .github-button:hover {
   transform: translateY(-2px);
-  background: #5eead4;
-  box-shadow: 0 10px 25px rgba(45, 212, 191, 0.16);
+  background: var(--primary-hover);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.16);
 }
 
 .github-button-arrow {
@@ -143,8 +141,8 @@
   width: 42px;
   height: 42px;
   margin-bottom: 19px;
-  color: var(--teal);
-  background: rgba(45, 212, 191, 0.08);
+  color: var(--primary-color);
+  background: rgba(37, 99, 235, 0.08);
   border-radius: 11px;
   font-size: 1.1rem;
 }
@@ -163,14 +161,14 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--teal);
+  color: var(--primary-color);
   font-size: 0.84rem;
   font-weight: 650;
   transition: color 180ms ease;
 }
 
 .github-repositories-link:hover {
-  color: #99f6e4;
+  color: var(--primary-hover);
 }
 
 .github-repositories-link svg {

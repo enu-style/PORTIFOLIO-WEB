@@ -4,10 +4,8 @@
   inset: 0 0 auto;
   z-index: 1000;
   padding: 18px 24px;
-  background: rgba(11, 18, 32, 0.78);
-  border-bottom: 1px solid transparent;
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border-color);
   transition:
     padding 200ms ease,
     border-color 200ms ease,
@@ -18,7 +16,7 @@
   padding-top: 12px;
   padding-bottom: 12px;
   border-bottom-color: var(--border-color);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
 .navbar-container {
@@ -32,14 +30,14 @@
   position: relative;
   z-index: 1002;
   flex-shrink: 0;
-  color: var(--text-primary);
+  color: var(--text-dark);
   font-size: 1.55rem;
   font-weight: 800;
   letter-spacing: -0.06em;
 }
 
 .logo span {
-  color: var(--teal);
+  color: var(--primary-color);
 }
 
 .nav-menu {
@@ -61,18 +59,7 @@
 
 .nav-menu > li > a:hover,
 .nav-menu > li > a:focus-visible {
-  color: var(--teal);
-}
-
-.nav-menu .nav-cta > a {
-  padding: 9px 15px;
-  color: var(--teal);
-  border: 1px solid rgba(45, 212, 191, 0.35);
-  border-radius: 8px;
-}
-
-.nav-menu .nav-cta > a:hover {
-  background: rgba(45, 212, 191, 0.09);
+  color: var(--primary-color);
 }
 
 .nav-toggle,
@@ -97,8 +84,8 @@
     place-items: center;
     width: 44px;
     height: 44px;
-    color: var(--text-primary);
-    background: var(--surface);
+    color: var(--text-dark);
+    background: var(--bg-white);
     border: 1px solid var(--border-color);
     border-radius: 10px;
     font-size: 1.15rem;
@@ -117,9 +104,9 @@
     width: min(82vw, 340px);
     height: 100dvh;
     padding: 90px 28px 32px;
-    background: #0e192a;
+    background: var(--bg-white);
     border-left: 1px solid var(--border-color);
-    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.28);
+    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.08);
     list-style: none;
     transform: translateX(105%);
     visibility: hidden;
@@ -138,14 +125,7 @@
     width: 100%;
     padding: 13px 8px;
     font-size: 1.05rem;
-  }
-
-  .nav-menu .nav-cta {
-    margin-top: 12px;
-  }
-
-  .nav-menu .nav-cta > a {
-    justify-content: center;
+    color: var(--text-dark);
   }
 
   .nav-backdrop {
@@ -155,7 +135,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    background: rgba(2, 6, 15, 0.68);
+    background: rgba(0, 0, 0, 0.2);
   }
 }
 

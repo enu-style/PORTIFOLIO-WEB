@@ -40,7 +40,7 @@ const Contact = () => {
     const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     setStatus(
-      "Your email app should open with your message prepared. Review it and press Send to deliver it.",
+      "Your email app should open with your message ready to go. Just hit Send when you're ready.",
     );
 
     window.location.href = mailtoUrl;
@@ -50,14 +50,13 @@ const Contact = () => {
     <section id="contact" className="contact-section">
       <div className="container">
         <div className="section-heading">
-          <span className="section-eyebrow">LET'S CONNECT</span>
+          <span className="section-eyebrow">GET IN TOUCH</span>
           <h2>
-            Have an idea? Let's <span className="highlight">talk.</span>
+            Have a question or an idea? <span className="highlight">Let's talk.</span>
           </h2>
           <p>
-            I'm interested in learning opportunities, internships,
-            collaboration, and projects that solve real problems. Feel free to
-            reach out.
+            I'm open to internships, collaborations, and projects that solve
+            real problems. Feel free to reach out — I'd love to hear from you.
           </p>
         </div>
 
@@ -128,8 +127,8 @@ const Contact = () => {
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="contact-form-heading">
               <span className="contact-kicker">SEND A MESSAGE</span>
-              <h3>Write to me</h3>
-              <p>Fill in the details below to prepare an email.</p>
+              <h3>Drop me a line</h3>
+              <p>Fill in your details and I'll get back to you as soon as I can.</p>
             </div>
 
             <div className="form-group">
@@ -143,7 +142,7 @@ const Contact = () => {
                 required
                 maxLength={100}
                 autoComplete="name"
-                placeholder="Enter your name"
+                placeholder="Your name"
               />
             </div>
 
@@ -158,7 +157,7 @@ const Contact = () => {
                 required
                 maxLength={254}
                 autoComplete="email"
-                placeholder="you@example.com"
+                placeholder="your@email.com"
               />
             </div>
 
@@ -172,13 +171,13 @@ const Contact = () => {
                 required
                 maxLength={5000}
                 rows={5}
-                placeholder="Tell me what you have in mind..."
+                placeholder="What would you like to talk about?"
               />
             </div>
 
             <button type="submit" className="submit-button">
               <FaPaperPlane aria-hidden="true" />
-              Prepare email
+              Send message
               <FaArrowRight className="submit-arrow" aria-hidden="true" />
             </button>
 
@@ -189,7 +188,7 @@ const Contact = () => {
             )}
 
             <p className="contact-form-note">
-              Your email application must be configured to send the message.
+              This will open your email app with the message ready to send.
             </p>
           </form>
         </div>
