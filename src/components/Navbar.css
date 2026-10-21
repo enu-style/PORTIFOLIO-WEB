@@ -85,7 +85,7 @@
     width: 44px;
     height: 44px;
     color: var(--text-dark);
-    background: var(--bg-white);
+    background: var(--surface);
     border: 1px solid var(--border-color);
     border-radius: 10px;
     font-size: 1.15rem;
@@ -104,9 +104,9 @@
     width: min(82vw, 340px);
     height: 100dvh;
     padding: 90px 28px 32px;
-    background: var(--bg-white);
+    background: var(--surface);
     border-left: 1px solid var(--border-color);
-    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.08);
+    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.4);
     list-style: none;
     transform: translateX(105%);
     visibility: hidden;
