@@ -13,7 +13,7 @@ Welcome to my personal portfolio! I am a **fourth-year Software Engineering stud
 
 ## Technologies
 
-- **Frontend:** HTML5, CSS3, JavaScript, React
+- **Frontend:** HTML5, CSS3, JavaScript, React, Vite
 - **Backend:** Node.js, Express.js, REST APIs
 - **Database:** PostgreSQL, Prisma ORM
 - **Programming:** Java, JavaScript
@@ -21,8 +21,8 @@ Welcome to my personal portfolio! I am a **fourth-year Software Engineering stud
 
 ## Portfolio Features
 
-- Responsive personal portfolio
-- Introduction and profile photo
+- Responsive personal portfolio with premium dark theme
+- Introduction and static profile photo
 - About me and technical skills
 - Projects and GitHub links
 - Certifications and learning resources
@@ -72,6 +72,13 @@ A desktop application for managing student information using a graphical interfa
 - E-Learning
 
 Certificate documents are available in the portfolio website.
+
+## Design
+
+- **Theme:** Premium dark slate/navy with sky-blue accent — professional look for internship applications
+- **Profile image:** Static, clean presentation without animations
+- **Color palette:** Deep slate backgrounds with vibrant sky-blue highlights
+- **Typography:** Inter font family for clean, modern readability
 
 ## Run Locally
 
